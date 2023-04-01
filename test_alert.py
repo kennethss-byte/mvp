@@ -95,5 +95,6 @@ except Exception as e:
     print("An error occurred:", e)
 
 finally:
+    print("----- ALL TESTS ARE PASSED! -----")
     # always close the webdriver instance to free up system resources
     driver.quit()

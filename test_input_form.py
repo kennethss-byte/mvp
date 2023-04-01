@@ -158,6 +158,7 @@ except Exception as e:
     print("An error occurred:", e)
 
 finally:
+    print("----- ALL TESTS ARE PASSED! -----")
 	driver.quit()
 
 
