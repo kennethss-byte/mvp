@@ -61,9 +61,9 @@ def read_only_textbox_test():
 
 
 def upload_file():
-	# DEFINE YOUR LOCAL PATH HERE! <local_path>/MVP_TEST/Dummy/xxx.png
-	first_pic_filepath = "/Users/kennethsarashadi/Downloads/MVP_TEST/Dummy/cici.png"
-	second_pic_filepath = "/Users/kennethsarashadi/Downloads/MVP_TEST/Dummy/cici2.png"
+	# DEFINE YOUR LOCAL PATH HERE! <local_path>/mvp/Dummy/xxx.png
+	first_pic_filepath = "/Users/kennethsarashadi/Downloads/mvp/Dummy/cici.png"
+	second_pic_filepath = "/Users/kennethsarashadi/Downloads/mvp/Dummy/cici2.png"
 	
 	upload_file_1 = wait.until(EC.visibility_of_element_located((By.ID, "upload_cv")))
 	upload_file_1.send_keys(first_pic_filepath)

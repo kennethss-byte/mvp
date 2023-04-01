@@ -59,9 +59,10 @@ def input_alert_test():
 	time.sleep(2)
 
 	# Move to alert prompt window and set a new value, then click OK
+	input_value = "John Doe"
 	alert = Alert(driver)
 	time.sleep(2)
-	alert.send_keys("John Doe")
+	alert.send_keys(input_value)
 	alert.accept()
 	time.sleep(2)
 

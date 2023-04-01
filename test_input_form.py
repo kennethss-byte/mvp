@@ -14,8 +14,8 @@ def send_keys(xpath, new_value):
 	return element
 
 def upload_file(xpath):
-	# DEFINE YOUR LOCAL PATH HERE! <local_path>/MVP_TEST/Dummy/xxx.png
-	file_path = "/Users/kennethsarashadi/Downloads/MVP_TEST/Dummy/cici.png"
+	# DEFINE YOUR LOCAL PATH HERE! <local_path>/mvp/Dummy/xxx.png
+	file_path = "/Users/kennethsarashadi/Downloads/mvp/Dummy/cici.png"
 	element = wait.until(EC.visibility_of_element_located((By.XPATH, str(xpath))))
 	element.send_keys(str(file_path))
 	time.sleep(2)
