@@ -159,8 +159,5 @@ except Exception as e:
 
 finally:
     print("----- ALL TESTS ARE PASSED! -----")
-	driver.quit()
-
-
-
-
+    # always close the webdriver instance to free up system resources
+    driver.quit()

@@ -23,7 +23,7 @@ def slider_test():
 	expected_value = 4
 	assert slider_value == expected_value, f"Slider value: {slider_value} did not match expected value: {expected_value}"
 	if slider_value == expected_value:
-		print(f"Slider value matched!")
+		print(f"Test 1: Slider value matched!")
 
 def menu_select_test():
 	# Locate select menu
@@ -44,7 +44,7 @@ def menu_select_test():
 	selected_value = wait.until(EC.visibility_of_element_located((By.ID, "select_lang_validate"))).text
 	assert selected_value == expected_value, f"Selected value: {selected_value} did not match expected value: {expected_value}"
 	if selected_value == expected_value:
-		print(f"Selected value in select menu matched!")
+		print(f"Test 2: Selected value in select menu matched!")
 
 
 def read_only_textbox_test():
@@ -57,7 +57,7 @@ def read_only_textbox_test():
 	# assert the read-only attribute value
 	assert read_only_attr_value == "true", "Mandatory Skill (Read-Only textbox) is not read-only"
 	if read_only_attr_value:
-		print("Mandatory Skill (Read-Only textbox) is read-only!")
+		print("Test 3: Mandatory Skill (Read-Only textbox) is read-only!")
 
 
 def upload_file():
@@ -72,7 +72,7 @@ def upload_file():
 	uploaded_file = wait.until(EC.visibility_of_element_located((By.ID, "validate_cv"))).text
 	assert uploaded_file == expected_upload, "Uploaded file name is not matched"
 	if uploaded_file == expected_upload:
-		print("File is correctly attached!")
+		print("Test 4: Single file is correctly attached!")
 
 	upload_file_2 = wait.until(EC.visibility_of_element_located((By.ID, "upload_files")))
 	upload_file_2.send_keys(f"{first_pic_filepath}\n{second_pic_filepath}")
@@ -82,7 +82,7 @@ def upload_file():
 	# print(uploaded_files)
 	assert uploaded_files == expected_uploads, "Uploaded file names are not matched"
 	if uploaded_files == expected_uploads:
-		print("Files are correctly attached!")
+		print("Test 5: Multiple files are correctly attached!")
 
 	time.sleep(5)
 
@@ -108,11 +108,5 @@ except Exception as e:
 
 finally:
     print("----- ALL TESTS ARE PASSED! -----")
-	driver.quit()
-
-
-
-
-
-
-
+    # always close the webdriver instance to free up system resources
+    driver.quit()
